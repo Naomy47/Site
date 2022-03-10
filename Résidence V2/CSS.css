@@ -1,0 +1,298 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    background-color: rgb(190, 195, 88);
+}
+#menu{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0px;
+}
+.conteneur-nav{
+    position: static;
+    width: 100%;
+}
+nav input[type=checkbox]{
+    display: none;
+}
+nav label{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgb(134, 135, 53);
+}
+nav ul{
+    display: none;
+    list-style-type: none;
+    background-color: #555;
+}
+nav input[type=checkbox]:checked + ul{
+    display: flex;
+    flex-flow : column wrap;
+}
+nav ul li{
+    flex: 1 1 auto;
+    text-align: center;
+}
+nav > div > ul > li > a{
+    color:black;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    background-color: rgb(247, 238, 223);
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    background-color: rgb(233, 121, 38);
+}
+
+.drlt{
+    color: black;
+}
+.logo{
+    height: 25%;
+    width: 25%;
+}
+
+@media screen and (min-width: 980px){
+    .conteneur-nav{
+        position: static;
+    }
+    nav label, nav input{
+        display: none;
+    }
+    nav input[type=checkbox]:checked + ul, nav ul{
+        display: flex;
+        flex-flow: row wrap;
+        background-color: white;
+    }
+    nav ul li{
+        position: relative;
+    }
+    nav > div > ul > li > a{
+        color: black;
+    }
+    nav a{
+        border-bottom: 2px solid transparent;
+    }
+    nav a:hover{
+        color: white;
+        border-bottom: 2px solid rgb(134, 135, 53);
+    }
+
+    nav > div > ul li:hover .ssmenu{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .drlt > a::after{
+        font-size: 12px;
+    }
+    .logo{
+        height: 10%;
+        width: 10%;
+    }
+   
+}
+
+.conteneur-contenu{
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+footer p{
+    background-color: rgb(58, 52, 32);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+footer {
+    color: white;
+    background-color:rgb(58, 52, 32);
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width: 100%;
+    padding-left:20px;
+    }
+
+h3{
+    text-align: center;
+}
+
+.Text p{
+    padding-left:50px;
+    padding-right:50px;
+    text-align: center;
+}
+
+table{
+    width:100%;
+}
+
+.image{
+    width: 75%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    align-items: center;
+  }
+
+
+
+@media screen and (max-width: 979px){
+    body{
+        position: relative;
+        height: 100%;
+    }
+    .menuul{
+    position:absolute;
+    width : 100%;
+    }
+    footer {
+        position: fixed; 
+        bottom: 0;
+        color: white;
+        background-color:rgb(233, 121, 38);
+        width: 100%;
+        padding-left:0px;
+    }
+    footer p{
+        background-color: rgb(233, 121, 38);
+        display: block;
+        margin-block-start: 1%;
+        margin-block-end: 1%;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-left:5px;
+        
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px;
+    }
+
+    .Text p{
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+
+.textaccueil{
+    font-family: 'Noto Serif', serif;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form h1{
+    text-align: center;
+}
+
+
+form {
+    text-align: center;
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  margin-top : 1em;
+  width: 50%;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  padding-top: 0;
+  border-radius: 1em;
+  padding-left :5px;
+  color : #000000;
+  font-weight: bold;
+  
+}
+
+form div + div {
+  margin-top: 10px;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+}
+
+input, textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px;
+color : #000000;  /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+  color : #000000;
+}
